@@ -1,0 +1,14 @@
+{
+    "title": "Z-Wave Fibaro",
+    "tagline": "Integrate Z-Wave based devices from Fibaro",
+    "icon": "fibaro.jpg",
+    "stability": "vendor",
+    "offline": true,
+    "technologies": [
+        "z-wave"
+    ],
+    "categories": [
+        "socket",
+        "sensor"
+    ]
+}

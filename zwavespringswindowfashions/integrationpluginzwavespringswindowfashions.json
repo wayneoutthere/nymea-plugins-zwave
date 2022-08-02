@@ -1,0 +1,221 @@
+{
+    "name": "ZWaveSpringsWindowFashions",
+    "displayName": "Z-Wave Springs Window Fashions",
+    "id": "2872e07a-d6fe-433f-8d6c-cd2f880d6fa3",
+    "vendors": [
+        {
+            "name": "springsWindowFashions",
+            "displayName": "Springs Window Fashions",
+            "id": "6e42a2f9-cd84-4c18-8a0a-38356b275c85",
+            "thingClasses": [
+                {
+                    "id": "df32f5d9-25f0-41ff-924a-586ec0e983d6",
+                    "name": "rollerShade",
+                    "displayName": "RSZ1 Roller Shade",
+                    "createMethods": [ "auto" ],
+                    "interfaces": [ "extendedshutter", "battery", "wirelessconnectable" ],
+                    "paramTypes": [
+                        {
+                            "id": "3a6a8584-ee0f-45ca-8c13-7ceb23d564b0",
+                            "name": "nodeId",
+                            "displayName": "Node ID",
+                            "type": "uint",
+                            "defaultValue": 0
+                        },
+                        {
+                            "id": "1af4b0aa-57cd-4a65-812f-07fed5d479eb",
+                            "name": "networkUuid",
+                            "displayName": "Z-Wave network UUID",
+                            "type": "QString",
+                            "defaultValue": ""
+                        }
+                    ],
+                    "settingsTypes": [
+                        {
+                            "id": "33ad6003-686a-4f01-93f0-22378eb0b177",
+                            "name": "mode",
+                            "displayName": "Mode",
+                            "type": "QString",
+                            "allowedValues": ["Shutter", "Venetian"],
+                            "defaultValue": "Shutter"
+                        },
+                        {
+                            "id": "ecd29e24-97e1-4182-9c73-36cdde589fa2",
+                            "name": "openCloseTime",
+                            "displayName": "Motor moving up/down time",
+                            "type": "uint",
+                            "minValue": 0,
+                            "maxValue": 32767,
+                            "defaultValue": "0"
+                        }
+                    ],
+                    "stateTypes": [
+                        {
+                            "id": "de078e37-e94c-45c3-a2e9-ed249a4ab92a",
+                            "name": "connected",
+                            "displayName": "Connected",
+                            "displayNameEvent": "Connected changed",
+                            "type": "bool",
+                            "cached": false,
+                            "defaultValue": false
+                        },
+                        {
+                            "id": "4817e1d2-583f-42c4-8b3c-85cfcb9ddb8c",
+                            "name": "signalStrength",
+                            "displayName": "Signal strength",
+                            "displayNameEvent": "Signal strength changed",
+                            "defaultValue": 0,
+                            "maxValue": 100,
+                            "minValue": 0,
+                            "type": "uint",
+                            "unit": "Percentage",
+                            "cached": false
+                        },
+                        {
+                            "id": "407e7db4-7257-4657-9aa5-04b243f8f601",
+                            "name": "moving",
+                            "displayName": "Moving",
+                            "displayNameEvent": "Movement started/stopeed",
+                            "type": "bool",
+                            "defaultValue": false
+                        },
+                        {
+                            "id": "03bd4eb3-485c-4676-9901-a29dd5a61867",
+                            "name": "percentage",
+                            "displayName": "Position",
+                            "displayNameEvent": "Position changed",
+                            "displayNameAction": "Set position",
+                            "type": "int",
+                            "minValue": 0,
+                            "maxValue": 100,
+                            "unit": "Percentage",
+                            "writable": true,
+                            "defaultValue": 0
+                        },
+                        {
+                            "id": "c3e68496-da84-450c-8e1e-e26d9ac6c807",
+                            "name": "batteryLevel",
+                            "displayName": "Battery level",
+                            "displayNameEvent": "Battery level changed",
+                            "type": "int",
+                            "minValue": 0,
+                            "maxValue": 100,
+                            "unit": "Percentage",
+                            "defaultValue": 0
+                        },
+                        {
+                            "id": "179a9d7c-ee22-4aaa-98b2-faa3d69058b8",
+                            "name": "batteryCritical",
+                            "displayName": "Battery level critical",
+                            "displayNameEvent": "Battery entered critical state",
+                            "type": "bool",
+                            "defaultValue": false
+                        }
+                    ],
+                    "actionTypes": [
+                        {
+                            "id": "847e271e-428c-45ce-aced-203de9a79662",
+                            "name": "open",
+                            "displayName": "Open"
+                        },
+                        {
+                            "id": "72d6a77d-1b8b-41f2-bf95-6798106a6b2e",
+                            "name": "close",
+                            "displayName": "Close"
+                        },
+                        {
+                            "id": "777dd1ec-06de-49d8-979c-e48737313b6c",
+                            "name": "stop",
+                            "displayName": "Stop"
+                        }
+                    ]
+                },
+                {
+                    "id": "ea5d0123-266e-4879-98f9-ecd4e2603e15",
+                    "name": "remoteControl",
+                    "displayName": "BRZ1 Remote control",
+                    "createMethods": [ "auto" ],
+                    "interfaces": [ "multibutton", "battery", "wirelessconnectable" ],
+                    "paramTypes": [
+                        {
+                            "id": "932ea07c-7a81-47a0-8197-cd81d9ab34de",
+                            "name": "nodeId",
+                            "displayName": "Node ID",
+                            "type": "uint",
+                            "defaultValue": 0
+                        },
+                        {
+                            "id": "f81b1ae6-1336-4567-8ca8-dfc5a391168b",
+                            "name": "networkUuid",
+                            "displayName": "Z-Wave network UUID",
+                            "type": "QString",
+                            "defaultValue": ""
+                        }
+                    ],
+                    "stateTypes": [
+                        {
+                            "id": "33394ace-3c4f-44b0-959f-5eb4721ec982",
+                            "name": "connected",
+                            "displayName": "Connected",
+                            "displayNameEvent": "Connected changed",
+                            "type": "bool",
+                            "cached": false,
+                            "defaultValue": false
+                        },
+                        {
+                            "id": "dfb91a2d-04f3-4dce-a822-e14f802e5416",
+                            "name": "signalStrength",
+                            "displayName": "Signal strength",
+                            "displayNameEvent": "Signal strength changed",
+                            "defaultValue": 0,
+                            "maxValue": 100,
+                            "minValue": 0,
+                            "type": "uint",
+                            "unit": "Percentage",
+                            "cached": false
+                        },
+                        {
+                            "id": "fc61ac93-8c85-4d2a-80ca-47070be0777b",
+                            "name": "batteryLevel",
+                            "displayName": "Battery level",
+                            "displayNameEvent": "Battery level changed",
+                            "type": "int",
+                            "minValue": 0,
+                            "maxValue": 100,
+                            "unit": "Percentage",
+                            "defaultValue": 0
+                        },
+                        {
+                            "id": "3bb7a2c8-d1e7-4ce6-a409-910d13f7d839",
+                            "name": "batteryCritical",
+                            "displayName": "Battery level critical",
+                            "displayNameEvent": "Battery entered critical state",
+                            "type": "bool",
+                            "defaultValue": false
+                        }
+                    ],
+                    "eventTypes": [
+                        {
+                            "id": "6348d71a-413a-40aa-ac5e-0ba14933a452",
+                            "name": "pressed",
+                            "displayName": "Pressed",
+                            "paramTypes": [
+                                {
+                                    "id": "eb63078c-2781-47bc-9242-f8f6379074fe",
+                                    "name": "buttonName",
+                                    "displayName": "Button name",
+                                    "type": "QString",
+                                    "allowedValues": [
+                                        "Up",
+                                        "Down",
+                                        "Home"
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,243 @@
+{
+    "name": "ZWaveFibaro",
+    "displayName": "Z-Wave Fibaro",
+    "id": "fc5336be-bc9e-48d1-9ad4-d2365321c000",
+    "vendors": [
+        {
+            "name": "fibaro",
+            "displayName": "FIBARO System",
+            "id": "1227ce2d-b134-4ff5-81c9-5ab91c0c8030",
+            "thingClasses": [
+                {
+                    "id": "695b54dc-99f8-4fb2-a773-57e268b7a193",
+                    "name": "powerSocket",
+                    "displayName": "Wall plug FGWPE/F",
+                    "createMethods": [ "Auto" ],
+                    "interfaces": [ "powersocket", "smartmeterconsumer", "wirelessconnectable" ],
+                    "paramTypes": [
+                        {
+                            "id": "12ec1193-5bfc-4c82-bcca-10d32ce7b811",
+                            "name": "nodeId",
+                            "displayName": "Node ID",
+                            "type": "uint",
+                            "defaultValue": 0
+                        },
+                        {
+                            "id": "ce62c148-2b79-4a7b-aa6a-d5cc1ed3f4fb",
+                            "name": "networkUuid",
+                            "displayName": "Z-Wave network UUID",
+                            "type": "QString",
+                            "defaultValue": ""
+                        }
+                    ],
+                    "settingsTypes": [
+                        {
+                            "id": "8fbb2a3f-c628-400f-bfe7-a283839041d1",
+                            "name": "alwaysOnMode",
+                            "displayName": "Always on mode",
+                            "type": "bool",
+                            "defaultValue": false
+                        },
+                        {
+                            "id": "42662a49-7439-4c20-8761-adeedc8dc36d",
+                            "name": "restoreMode",
+                            "displayName": "Restore state after power loss",
+                            "type": "bool",
+                            "defaultValue": true
+                        },
+                        {
+                            "id": "a99086c6-b846-4833-9d88-3bada43fc5ab",
+                            "name": "ledMode",
+                            "displayName": "LED mode",
+                            "type": "QString",
+                            "allowedValues": [
+                                "Power value",
+                                "Power cycle",
+                                "White",
+                                "Red",
+                                "Green",
+                                "Blue",
+                                "Yellow",
+                                "Cyan",
+                                "Magenta",
+                                "Off"
+                            ],
+                            "defaultValue": "Power value"
+                        }
+                    ],
+                    "stateTypes": [
+                        {
+                            "id": "7db10726-fec9-43d7-a807-b94295836a8a",
+                            "name": "connected",
+                            "displayName": "Connected",
+                            "displayNameEvent": "Connected changed",
+                            "type": "bool",
+                            "cached": false,
+                            "defaultValue": false
+                        },
+                        {
+                            "id": "abe47f33-787c-4820-8bb3-6a5ccd1de24d",
+                            "name": "signalStrength",
+                            "displayName": "Signal strength",
+                            "displayNameEvent": "Signal strength changed",
+                            "defaultValue": 0,
+                            "maxValue": 100,
+                            "minValue": 0,
+                            "type": "uint",
+                            "unit": "Percentage",
+                            "cached": false
+                        },
+                        {
+                            "id": "a51dea82-6745-4855-8728-3f3cfee0f7f4",
+                            "name": "power",
+                            "displayName": "Power",
+                            "displayNameEvent": "Power changed",
+                            "displayNameAction": "Set power",
+                            "type": "bool",
+                            "defaultValue": false,
+                            "writable": true,
+                            "ioType": "digitalOutput"
+                        },
+                        {
+                            "id": "be16e4f3-4a4d-4447-9d74-660f46b6d580",
+                            "name": "currentPower",
+                            "displayName": "Current power consumption",
+                            "displayNameEvent": "Current power consumption changed",
+                            "type": "double",
+                            "unit": "Watt",
+                            "defaultValue": 0,
+                            "cached": false
+                        },
+                        {
+                            "id": "628b37bc-28ed-4c4c-aa83-80383fd99316",
+                            "name": "totalEnergyConsumed",
+                            "displayName": "Total consumed energy",
+                            "displayNameEvent": "Total energy consumed changed",
+                            "type": "double",
+                            "unit": "KiloWattHour",
+                            "defaultValue": 0
+                        }
+                    ]
+                },
+                {
+                    "id": "fe7e6f2f-5ba2-4c39-b4c4-36d69e7c4738",
+                    "name": "motionSensor",
+                    "displayName": "Motion sensor",
+                    "createMethods": [ "Auto" ],
+                    "interfaces": [ "presencesensor", "temperaturesensor", "lightsensor", "wirelessconnectable", "battery" ],
+                    "paramTypes": [
+                        {
+                            "id": "7281ca0d-3658-40f9-a269-4251b3affd5d",
+                            "name": "nodeId",
+                            "displayName": "Node ID",
+                            "type": "uint",
+                            "defaultValue": 0
+                        },
+                        {
+                            "id": "8688f540-36ef-4ae0-90f9-be4b4148685a",
+                            "name": "networkUuid",
+                            "displayName": "Z-Wave network UUID",
+                            "type": "QString",
+                            "defaultValue": ""
+                        }
+                    ],
+                    "settingsTypes": [
+                        {
+                            "id": "ef4a9916-70b9-4195-9d69-27cd030f0fdf",
+                            "name": "sensitivity",
+                            "displayName": "Sensitivity",
+                            "type": "uint",
+                            "minValue": 0,
+                            "maxValue": 100,
+                            "unit": "Percentage"
+                        }
+                    ],
+                    "stateTypes": [
+                        {
+                            "id": "56a58de9-fc2d-4ba4-b986-6494468c1297",
+                            "name": "connected",
+                            "displayName": "Connected",
+                            "displayNameEvent": "Connected changed",
+                            "type": "bool",
+                            "cached": false,
+                            "defaultValue": false
+                        },
+                        {
+                            "id": "4d9dc0ee-4a91-48d0-8fad-bb1a88a30aef",
+                            "name": "signalStrength",
+                            "displayName": "Signal strength",
+                            "displayNameEvent": "Signal strength changed",
+                            "defaultValue": 0,
+                            "maxValue": 100,
+                            "minValue": 0,
+                            "type": "uint",
+                            "unit": "Percentage",
+                            "cached": false
+                        },
+                        {
+                            "id": "baebd40c-a942-4228-a8cf-2bfbd5599cb3",
+                            "name": "isPresent",
+                            "displayName": "Presence detected",
+                            "displayNameEvent": "Presence changed",
+                            "defaultValue": false,
+                            "type": "bool"
+                        },
+                        {
+                            "id": "b777b208-8cb1-457e-b3c0-52ec7e29bd4a",
+                            "name": "batteryCritical",
+                            "displayName": "Battery is critical",
+                            "displayNameEvent": "Battery critical changed",
+                            "defaultValue": false,
+                            "type": "bool"
+                        },
+                        {
+                            "id": "209c5af4-d13e-4411-92db-e204aae3a34a",
+                            "name": "batteryLevel",
+                            "displayName": "Battery level",
+                            "displayNameEvent": "Battery level changed",
+                            "defaultValue": 0,
+                            "type": "int",
+                            "unit": "Percentage",
+                            "minValue": 0,
+                            "maxValue": 100
+                        },
+                        {
+                            "id": "044c823e-e4da-4a69-91fe-c4a94d774493",
+                            "name": "tampered",
+                            "displayName": "Tampered",
+                            "displayNameEvent": "Tamper detected",
+                            "type": "bool",
+                            "defaultValue": false
+                        },
+                        {
+                            "id": "29207d04-0a34-4200-b933-a6bb3653fc56",
+                            "name": "temperature",
+                            "displayName": "Temperature",
+                            "displayNameEvent": "Temperature changed",
+                            "type": "double",
+                            "unit": "DegreeCelsius",
+                            "defaultValue": 0
+                        },
+                        {
+                            "id": "278c9d59-8948-4435-a94c-0eecc756b676",
+                            "name": "lightIntensity",
+                            "displayName": "Light intensity",
+                            "displayNameEvent": "Light intensity changed",
+                            "type": "double",
+                            "unit": "Lux",
+                            "defaultValue": 0
+                        },
+                        {
+                            "id": "b69041c8-5262-45b8-b3bd-a0a7cbc8f3a2",
+                            "name": "seismicIntensity",
+                            "displayName": "Seismic intensity",
+                            "displayNameEvent": "Seismic intensity changed",
+                            "type": "double",
+                            "defaultValue": 0
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

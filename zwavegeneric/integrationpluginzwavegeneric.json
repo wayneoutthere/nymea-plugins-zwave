@@ -1,0 +1,454 @@
+{
+    "name": "ZWaveGeneric",
+    "displayName": "Z-Wave Generic",
+    "id": "5605f31e-e05b-4d30-bdf4-a8fcc2ec201d",
+    "vendors": [
+        {
+            "name": "nymea",
+            "displayName": "nymea",
+            "id": "2062d64d-3232-433c-88bc-0d33c0ba2ba6",
+            "thingClasses": [
+                {
+                    "name": "powerSocket",
+                    "displayName": "Power socket",
+                    "id": "b2a9a251-f957-42c8-90d6-c421bdb98547",
+                    "createMethods": [ "Auto" ],
+                    "interfaces": [ "powersocket", "wirelessconnectable" ],
+                    "paramTypes": [
+                        {
+                            "id": "14d7519e-87cf-4d78-865f-0ad5dd5815cf",
+                            "name": "nodeId",
+                            "displayName": "Node ID",
+                            "type": "uint",
+                            "defaultValue": 0
+                        },
+                        {
+                            "id": "e5720fd2-876f-467e-b8f7-ce0653f07696",
+                            "name": "networkUuid",
+                            "displayName": "Z-Wave network UUID",
+                            "type": "QString",
+                            "defaultValue": ""
+                        },
+                        {
+                            "id": "1f70f91a-526c-452e-8724-24e96731aeee",
+                            "name": "manufacturer",
+                            "displayName": "Manufacturer",
+                            "type": "QString",
+                            "defaultValue": ""
+                        },
+                        {
+                            "id": "68e79493-c9e3-45d7-8ffe-688d29541aa8",
+                            "name": "model",
+                            "displayName": "Model",
+                            "type": "QString",
+                            "defaultValue": ""
+                        }
+                    ],
+                    "stateTypes": [
+                        {
+                            "id": "7b0f1f5f-f174-4672-af27-c0459829bee8",
+                            "name": "connected",
+                            "displayName": "Connected",
+                            "displayNameEvent": "Connected changed",
+                            "type": "bool",
+                            "cached": false,
+                            "defaultValue": false
+                        },
+                        {
+                            "id": "528ed056-0b50-4002-833a-78ffcf64442f",
+                            "name": "signalStrength",
+                            "displayName": "Signal strength",
+                            "displayNameEvent": "Signal strength changed",
+                            "defaultValue": 0,
+                            "maxValue": 100,
+                            "minValue": 0,
+                            "type": "uint",
+                            "unit": "Percentage"
+                        },
+                        {
+                            "id": "ac01cd1c-009c-4c83-b27b-273920bd775e",
+                            "name": "power",
+                            "displayName": "Power",
+                            "displayNameEvent": "Power changed",
+                            "displayNameAction": "Set power",
+                            "type": "bool",
+                            "defaultValue": false,
+                            "writable": true,
+                            "ioType": "digitalOutput"
+                        }
+                    ]
+                },
+                {
+                    "name": "powerMeterSocket",
+                    "displayName": "Power socket with energy metering",
+                    "id": "22feafcc-40cb-4699-91dd-0903693287b9",
+                    "createMethods": [ "Auto" ],
+                    "interfaces": [ "powersocket", "smartmeterconsumer", "wirelessconnectable" ],
+                    "paramTypes": [
+                        {
+                            "id": "6336c0e9-126a-4e9a-b44e-393673e303f7",
+                            "name": "nodeId",
+                            "displayName": "Node ID",
+                            "type": "uint",
+                            "defaultValue": 0
+                        },
+                        {
+                            "id": "a7a6d590-059a-473a-af06-45290425245d",
+                            "name": "networkUuid",
+                            "displayName": "Z-Wave network UUID",
+                            "type": "QString",
+                            "defaultValue": ""
+                        },
+                        {
+                            "id": "da84dbbb-7044-4713-8435-961f7ce8fe31",
+                            "name": "manufacturer",
+                            "displayName": "Manufacturer",
+                            "type": "QString",
+                            "defaultValue": ""
+                        },
+                        {
+                            "id": "1c7623c1-df66-4c27-b5c3-308b8af9eb91",
+                            "name": "model",
+                            "displayName": "Model",
+                            "type": "QString",
+                            "defaultValue": ""
+                        }
+                    ],
+                    "stateTypes": [
+                        {
+                            "id": "34ffc41b-5596-499f-90b9-f39f8220a7f0",
+                            "name": "connected",
+                            "displayName": "Connected",
+                            "displayNameEvent": "Connected changed",
+                            "type": "bool",
+                            "cached": false,
+                            "defaultValue": false
+                        },
+                        {
+                            "id": "738ae904-d28c-46b0-b2db-0dc82e14245c",
+                            "name": "signalStrength",
+                            "displayName": "Signal strength",
+                            "displayNameEvent": "Signal strength changed",
+                            "defaultValue": 0,
+                            "maxValue": 100,
+                            "minValue": 0,
+                            "type": "uint",
+                            "unit": "Percentage",
+                            "cached": false
+                        },
+                        {
+                            "id": "a0bc7583-2600-4b6f-ae89-252029dda249",
+                            "name": "power",
+                            "displayName": "Power",
+                            "displayNameEvent": "Power changed",
+                            "displayNameAction": "Set power",
+                            "type": "bool",
+                            "defaultValue": false,
+                            "writable": true,
+                            "ioType": "digitalOutput"
+                        },
+                        {
+                            "id": "d486ccbf-0803-4ac8-bbde-db26116a4754",
+                            "name": "currentPower",
+                            "displayName": "Current power consumption",
+                            "displayNameEvent": "Current power consumption changed",
+                            "type": "double",
+                            "unit": "Watt",
+                            "defaultValue": 0,
+                            "cached": false
+                        },
+                        {
+                            "id": "6583f3ff-838c-4dfd-98e4-2d7113f0824e",
+                            "name": "totalEnergyConsumed",
+                            "displayName": "Total consumed energy",
+                            "displayNameEvent": "Total energy consumed changed",
+                            "type": "double",
+                            "unit": "KiloWattHour",
+                            "defaultValue": 0
+                        }
+                    ]
+                },
+                {
+                    "name": "doorLock",
+                    "displayName": "Door lock",
+                    "id": "f5f60f66-215a-492b-9088-ef8e2b58c802",
+                    "setupMethod": "JustAdd",
+                    "createMethods": [ "Auto" ],
+                    "interfaces": [ "smartlock", "battery", "wirelessconnectable" ],
+                    "paramTypes": [
+                        {
+                            "id": "07d15feb-82d2-479d-838a-5fa43b7fbd59",
+                            "name": "nodeId",
+                            "displayName": "Node ID",
+                            "type": "uint",
+                            "defaultValue": 0
+                        },
+                        {
+                            "id": "642f4ed3-bcd8-47db-aa5b-8a62973b0d95",
+                            "name": "networkUuid",
+                            "displayName": "Zigbee network UUID",
+                            "type": "QString",
+                            "defaultValue": ""
+                        },
+                        {
+                            "id": "a9eff0a3-6acd-45ec-b0ae-60917721439e",
+                            "name": "manufacturer",
+                            "displayName": "Manufacturer",
+                            "type": "QString",
+                            "defaultValue": ""
+                        },
+                        {
+                            "id": "444d8415-0416-4e80-92ec-ead16d26130f",
+                            "name": "model",
+                            "displayName": "Model",
+                            "type": "QString",
+                            "defaultValue": ""
+                        }
+                    ],
+                    "stateTypes": [
+                        {
+                            "id": "6fc8b1ad-5eb0-4038-8a65-847343c5a432",
+                            "name": "connected",
+                            "displayName": "Connected",
+                            "displayNameEvent": "Connected changed",
+                            "type": "bool",
+                            "cached": false,
+                            "defaultValue": false
+                        },
+                        {
+                            "id": "02af2c5f-87ec-4f86-8784-3a089d5928e9",
+                            "name": "signalStrength",
+                            "displayName": "Signal strength",
+                            "displayNameEvent": "Signal strength changed",
+                            "defaultValue": 0,
+                            "maxValue": 100,
+                            "minValue": 0,
+                            "type": "uint",
+                            "unit": "Percentage"
+                        },
+                        {
+                            "id": "b0a977d8-a789-4bc9-ad11-afb372b15e69",
+                            "name": "batteryLevel",
+                            "displayName": "Battery level",
+                            "displayNameEvent": "Battery level changed",
+                            "type": "int",
+                            "unit": "Percentage",
+                            "defaultValue": 50,
+                            "minValue": 0,
+                            "maxValue": 100
+                        },
+                        {
+                            "id": "ba8147de-d38b-4295-a694-952a28c3e9d7",
+                            "name": "batteryCritical",
+                            "displayName": "Battery critical",
+                            "displayNameEvent": "Battery critical changed",
+                            "type": "bool",
+                            "defaultValue": false
+                        },
+                        {
+                            "id": "9e1ce33e-ab39-4fce-8b68-54dfa970fea4",
+                            "name": "state",
+                            "displayName": "Lock state",
+                            "displayNameEvent": "Lock state changed",
+                            "type": "QString",
+                            "possibleValues": ["locked", "locking", "unlocked", "unlocking", "unlatched",  "unlatching"],
+                            "defaultValue": "locked"
+                        }
+                    ],
+                    "actionTypes": [
+                        {
+                            "id": "72c23e40-e6f9-4e21-9e8f-d9a56711054c",
+                            "name": "lock",
+                            "displayName": "Unlock door"
+                        },
+                        {
+                            "id": "6ff7d9d2-8169-4dd0-befc-9c4f0b4c110d",
+                            "name": "unlock",
+                            "displayName": "Lock door"
+                        }
+                    ]
+                },
+                {
+                    "id": "adc6d53a-34a9-486e-a501-34b84395201d",
+                    "name": "doorSensor",
+                    "displayName": "Door sensor",
+                    "createMethods": ["auto"],
+                    "interfaces": ["closablesensor", "battery", "wirelessconnectable"],
+                    "paramTypes": [
+                        {
+                            "id": "13191b21-b69c-44a7-ba2d-90bd33ea5abb",
+                            "name": "nodeId",
+                            "displayName": "Node ID",
+                            "type": "uint",
+                            "defaultValue": 0
+                        },
+                        {
+                            "id": "4fd0de6c-fe82-4289-84f6-1d75ec511cf8",
+                            "name": "networkUuid",
+                            "displayName": "Zigbee network UUID",
+                            "type": "QString",
+                            "defaultValue": ""
+                        },
+                        {
+                            "id": "de3d5469-2eb8-416b-9123-61349da8eae1",
+                            "name": "manufacturer",
+                            "displayName": "Manufacturer",
+                            "type": "QString",
+                            "defaultValue": ""
+                        },
+                        {
+                            "id": "5db9f0c9-d856-4eb5-a3e3-8a9b45ae6a02",
+                            "name": "model",
+                            "displayName": "Model",
+                            "type": "QString",
+                            "defaultValue": ""
+                        }
+                    ],
+                    "stateTypes": [
+                        {
+                            "id": "99bfe225-cfca-4fe6-ab86-b50a4dba0345",
+                            "name": "closed",
+                            "displayName": "Closed",
+                            "displayNameEvent": "Opened or closed",
+                            "type": "bool",
+                            "defaultValue": false
+                        },
+                        {
+                            "id": "4d3fdaee-eca3-42c1-8aa8-f315d6aed6e5",
+                            "name": "batteryLevel",
+                            "displayName": "Battery level",
+                            "displayNameEvent": "Battery level changed",
+                            "type": "int",
+                            "minValue": 0,
+                            "maxValue": 100,
+                            "unit": "Percentage",
+                            "defaultValue": 50
+                        },
+                        {
+                            "id": "56c95d21-11da-436a-9631-9f667d433076",
+                            "name": "batteryCritical",
+                            "displayName": "Battery critical",
+                            "displayNameEvent": "Battery critical changed",
+                            "type": "bool",
+                            "defaultValue": false
+                        },
+                        {
+                            "id": "564245ee-34b8-4af3-9ede-8661c5c8bf7e",
+                            "name": "connected",
+                            "displayName": "Connected",
+                            "displayNameEvent": "Connected or disconnected",
+                            "type": "bool",
+                            "defaultValue": false,
+                            "cached": false
+                        },
+                        {
+                            "id": "d2ae9d3b-fad0-412a-9c0b-f31bbf0658d2",
+                            "name": "signalStrength",
+                            "displayName": "Signal strength",
+                            "displayNameEvent": "Signal strength changed",
+                            "type": "uint",
+                            "minValue": 0,
+                            "maxValue": 100,
+                            "unit": "Percentage",
+                            "defaultValue": 0
+                        }
+                    ]
+                },
+                {
+                    "id": "8e260080-3aa3-42fc-9908-05dd163f9dcf",
+                    "name": "motionSensor",
+                    "displayName": "Motion sensor",
+                    "interfaces": ["presencesensor", "wirelessconnectable"],
+                    "paramTypes": [
+                        {
+                            "id": "20ea297e-26b4-4f65-ace7-912a5d1e6ff7",
+                            "name": "nodeId",
+                            "displayName": "Node ID",
+                            "type": "uint",
+                            "defaultValue": 0
+                        },
+                        {
+                            "id": "f47387fa-1c43-48c1-8e0c-01105da679d4",
+                            "name": "networkUuid",
+                            "displayName": "Z-Wave network UUID",
+                            "type": "QString",
+                            "defaultValue": ""
+                        },
+                        {
+                            "id": "a3fec0b9-0039-48f5-a405-c667e66f6bf2",
+                            "name": "manufacturer",
+                            "displayName": "Manufacturer",
+                            "type": "QString",
+                            "defaultValue": ""
+                        },
+                        {
+                            "id": "61cee032-b1e6-4de4-9f64-cdf471bc6586",
+                            "name": "model",
+                            "displayName": "Model",
+                            "type": "QString",
+                            "defaultValue": ""
+                        }
+                    ],
+                    "stateTypes": [
+                        {
+                            "id": "48e4d1c6-5415-4c03-9935-6db0c818557d",
+                            "name": "isPresent",
+                            "displayName": "Presence detected",
+                            "displayNameEvent": "Presence detected changed",
+                            "type": "bool",
+                            "defaultValue": "false",
+                            "cached": false
+                        },
+                        {
+                            "id": "f4586208-a20e-41c9-9ba7-01254617ddd6",
+                            "name": "tampered",
+                            "displayName": "Tampered",
+                            "displayNameEvent": "Tampered changed",
+                            "type": "bool",
+                            "defaultValue": false
+                        },
+                        {
+                            "id": "02523370-2bb6-4103-bd1e-ddb9952dd43a",
+                            "name": "batteryLevel",
+                            "displayName": "Battery level",
+                            "displayNameEvent": "Battery level changed",
+                            "type": "int",
+                            "minValue": 0,
+                            "maxValue": 100,
+                            "unit": "Percentage",
+                            "defaultValue": 50
+                        },
+                        {
+                            "id": "bf7ad9fc-4ed2-4671-8e32-a63f8eb6327c",
+                            "name": "batteryCritical",
+                            "displayName": "Battery critical",
+                            "displayNameEvent": "Battery critical changed",
+                            "type": "bool",
+                            "defaultValue": false
+                        },
+                        {
+                            "id": "076fca3a-31af-4634-b571-fd82b4a5542c",
+                            "name": "connected",
+                            "displayName": "Connected",
+                            "displayNameEvent": "Connected or disconnected",
+                            "type": "bool",
+                            "defaultValue": false,
+                            "cached": false
+                        },
+                        {
+                            "id": "821f9296-4dc1-435b-89ef-e193361f54cb",
+                            "name": "signalStrength",
+                            "displayName": "Signal strength",
+                            "displayNameEvent": "Signal strength changed",
+                            "type": "uint",
+                            "minValue": 0,
+                            "maxValue": 100,
+                            "unit": "Percentage",
+                            "defaultValue": 0
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

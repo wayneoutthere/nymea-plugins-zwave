@@ -1,0 +1,146 @@
+{
+    "name": "ZWaveQubino",
+    "displayName": "Z-Wave Qubino",
+    "id": "8b55a5c9-3770-49ca-a8fe-3bcb735c67a2",
+    "vendors": [
+        {
+            "name": "qubino",
+            "displayName": "Qubino",
+            "id": "6e42a2f9-cd84-4c18-8a0a-38356b275c85",
+            "thingClasses": [
+                {
+                    "id": "08d2df02-e205-43ff-a68c-08f1b2a023dc",
+                    "name": "flushShutter",
+                    "displayName": "ZMNHCDx Flush Shutter",
+                    "createMethods": [ "auto" ],
+                    "interfaces": [ "extendedshutter", "smartmeterconsumer", "wirelessconnectable" ],
+                    "paramTypes": [
+                        {
+                            "id": "1ce64962-21dd-45b3-9d63-9cf325cc925e",
+                            "name": "nodeId",
+                            "displayName": "Node ID",
+                            "type": "uint",
+                            "defaultValue": 0
+                        },
+                        {
+                            "id": "7c25b800-e09d-4ee8-bf37-85f589fd8d36",
+                            "name": "networkUuid",
+                            "displayName": "Z-Wave network UUID",
+                            "type": "QString",
+                            "defaultValue": ""
+                        }
+                    ],
+                    "settingsTypes": [
+                        {
+                            "id": "6e82bc50-703f-461f-9e18-3387e9e66168",
+                            "name": "mode",
+                            "displayName": "Mode",
+                            "type": "QString",
+                            "allowedValues": ["Shutter", "Venetian"],
+                            "defaultValue": "Shutter"
+                        },
+                        {
+                            "id": "b0d0c3af-c3b8-4cdd-b1db-80c51baed0ba",
+                            "name": "openCloseTime",
+                            "displayName": "Motor moving up/down time",
+                            "type": "uint",
+                            "minValue": 0,
+                            "maxValue": 32767,
+                            "defaultValue": "0"
+                        }
+                    ],
+                    "stateTypes": [
+                        {
+                            "id": "a53d1348-0336-481f-8412-bb42b7ca7ffd",
+                            "name": "connected",
+                            "displayName": "Connected",
+                            "displayNameEvent": "Connected changed",
+                            "type": "bool",
+                            "cached": false,
+                            "defaultValue": false
+                        },
+                        {
+                            "id": "5b6b1e02-68dc-4a07-844e-46b6884752a7",
+                            "name": "signalStrength",
+                            "displayName": "Signal strength",
+                            "displayNameEvent": "Signal strength changed",
+                            "defaultValue": 0,
+                            "maxValue": 100,
+                            "minValue": 0,
+                            "type": "uint",
+                            "unit": "Percentage",
+                            "cached": false
+                        },
+                        {
+                            "id": "a51dea82-6745-4855-8728-3f3cfee0f7f4",
+                            "name": "moving",
+                            "displayName": "Moving",
+                            "displayNameEvent": "Movement started/stopeed",
+                            "type": "bool",
+                            "defaultValue": false
+                        },
+                        {
+                            "id": "4c7bc094-d39a-4fef-b7fb-87d5f2fb2f67",
+                            "name": "percentage",
+                            "displayName": "Position",
+                            "displayNameEvent": "Position changed",
+                            "displayNameAction": "Set position",
+                            "type": "int",
+                            "minValue": 0,
+                            "maxValue": 100,
+                            "unit": "Percentage",
+                            "writable": true,
+                            "defaultValue": false
+                        },
+                        {
+                            "id": "e53721d4-c0f7-4350-8ee0-9cddc712bc64",
+                            "name": "currentPower",
+                            "displayName": "Current power consumption",
+                            "displayNameEvent": "Current power consumption changed",
+                            "type": "double",
+                            "unit": "Watt",
+                            "defaultValue": 0,
+                            "cached": false
+                        },
+                        {
+                            "id": "8e9b9169-1848-400d-a8ab-c4600d870ac2",
+                            "name": "totalEnergyConsumed",
+                            "displayName": "Total consumed energy",
+                            "displayNameEvent": "Total energy consumed changed",
+                            "type": "double",
+                            "unit": "KiloWattHour",
+                            "defaultValue": 0
+                        },
+                        {
+                            "id": "c0540714-4973-45c8-a65e-d04def8d3ad2",
+                            "name": "calibration",
+                            "displayName": "Calibration in progress",
+                            "displayNameEvent": "Calibration started/stopped",
+                            "displayNameAction": "Start/stop calibration",
+                            "type": "bool",
+                            "defaultValue": false,
+                            "writable": true
+                        }
+                    ],
+                    "actionTypes": [
+                        {
+                            "id": "6862c2f8-9a62-4db9-b7ab-c74bb3bf0b4b",
+                            "name": "open",
+                            "displayName": "Open"
+                        },
+                        {
+                            "id": "21ffb9be-49df-44c2-af2e-b2c5af553496",
+                            "name": "close",
+                            "displayName": "Close"
+                        },
+                        {
+                            "id": "ad9a446f-23e6-4413-a530-b5ba1cbc061a",
+                            "name": "stop",
+                            "displayName": "Stop"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

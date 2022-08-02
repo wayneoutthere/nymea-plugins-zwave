@@ -1,0 +1,57 @@
+Source: nymea-plugins-zwave
+Section: utils
+Priority: options
+Maintainer: nymea GmbH <developer@nymea.io>
+Build-depends: debhelper (>= 0.0.0),
+               libnymea-dev (>= 0.26~),
+               nymea-dev-tools:native,
+               pkg-config,
+               qtbase5-dev,
+Standards-Version: 3.9.3
+
+
+Package: nymea-plugin-zwave-generic
+Architecture: any
+Depends: ${shlibs:Depends},
+         ${misc:Depends},
+Description: nymea integration plugin for Z-Wave Spec compliant devices
+ This package contains the nymea integration plugin for Z-Wave devices which
+ adhere to the specification and thus can be handled in a unified and generic manner.
+
+
+Package: nymea-plugin-zwave-fibaro
+Architecture: any
+Depends: ${shlibs:Depends},
+         ${misc:Depends},
+Description: nymea integration plugin for Fibaro Z-Wave devices
+ This package contains the nymea integration plugin for Z-Wave based devices
+ made by Fibaro.
+
+
+Package: nymea-plugin-zwave-qubino
+Architecture: any
+Depends: ${shlibs:Depends},
+         ${misc:Depends},
+Description: nymea integration plugin for Qubino Z-Wave devices
+ This package contains the nymea integration plugin for Z-Wave based devices
+ made by Qubino.
+
+
+Package: nymea-plugin-zwave-springswindowfashions
+Architecture: any
+Depends: ${shlibs:Depends},
+         ${misc:Depends},
+Description: nymea integration plugin for Springs Window Fashions Z-Wave devices
+ This package contains the nymea integration plugin for Z-Wave based devices
+ made by Springs Window Fashions.
+
+
+Package: nymea-plugins-zwave
+Section: libs    
+Architecture: all
+Depends: nymea-plugin-zwave-fibaro,
+         nymea-plugin-zwave-generic,
+         nymea-plugin-zwave-qubino,
+         nymea-plugin-zwave-springswindowfashions,
+Description: Z-Wave integration plugins for nymea - meta package
+ This package will install all Z-Wave related integration plugins for nymea.

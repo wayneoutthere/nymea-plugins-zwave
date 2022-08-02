@@ -1,0 +1,15 @@
+{
+    "title": "Z-Wave Generic",
+    "tagline": "Connect and control Z-Wave compliant devices which don't require manufacturer specific extras.",
+    "icon": "z-wave.svg",
+    "stability": "consumer",
+    "offline": true,
+    "technologies": [
+        "z-wave"
+    ],
+    "categories": [
+        "socket",
+        "sensor",
+        "energy"
+    ]
+}
