@@ -1,3 +1,6 @@
-nymea-plugins-zwave (1.0.0) UNRELEASED; urgency=medium
+nymea-plugins-zwave (1.4.0) jammy; urgency=medium
+  [ Michael Zanetti ]
+  * New Z-Wave Plugins: Generic, Fibaro, Qubino and
+    SpringsWindowFashions
 
- -- Michael Zanetti <michael.zanetti@nymea.io>  Mon, 31 Jan 2022 15:23:34 +0100
+ -- jenkins <developer@nymea.io>  Wed, 24 Aug 2022 23:00:15 +0200
