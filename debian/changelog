@@ -1,3 +1,10 @@
+nymea-plugins-zwave (1.5.0) jammy; urgency=medium
+
+  [ Michael Zanetti ]
+  * Fix battery level states
+
+ -- jenkins <developer@nymea.io>  Mon, 17 Oct 2022 11:21:47 +0200
+
 nymea-plugins-zwave (1.4.1) jammy; urgency=medium
 
 
