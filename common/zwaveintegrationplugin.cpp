@@ -94,6 +94,18 @@ bool ZWaveIntegrationPlugin::manageNode(Thing *thing)
         thing->setStateValue("signalStrength", linkQuality);
     });
 
+    // Update battery level
+    if (thing->thingClass().hasStateType("batteryLevel")) {
+        thing->setStateValue("batteryLevel", node->value(ZWaveValue::GenreUser, ZWaveValue::CommandClassBattery, 1, 0, ZWaveValue::TypeByte).value().toUInt());
+        thing->setStateValue("batteryCritical", thing->stateValue("batteryLevel").toUInt() < 10);
+        connect(node, &ZWaveNode::valueChanged, thing, [thing](const ZWaveValue &value){
+            if (value.genre() == ZWaveValue::GenreUser && value.commandClass() == ZWaveValue::CommandClassBattery && value.instance() == 1 && value.index() == 0 && value.type() == ZWaveValue::TypeByte) {
+                thing->setStateValue("batteryLevel", value.value().toUInt());
+                thing->setStateValue("batteryCritical", thing->stateValue("batteryLevel").toUInt() < 10);
+            }
+        });
+    }
+
     return true;
 }
 
