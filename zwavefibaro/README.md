@@ -4,8 +4,8 @@ This plugin adds support for Z-Wave devices by Fibaro.
 
 ## Supported Things
 
-* Fibaro Wall Plug
-* Fibaro Motion Sensor
+* [ibaro Wall Plug](https://www.fibaro.com/en/products/wall-plug/)
+* [Fibaro Motion Sensor](https://www.fibaro.com/en/products/motion-sensor/)
 
 ## Pairing
 
