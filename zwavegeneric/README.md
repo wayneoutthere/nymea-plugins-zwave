@@ -49,7 +49,7 @@ All door locks that follow the Z-Wave door lock specification.
 
 Known to work:
 
-* Deadbold - Schlage (Allegion) Touchscreen Door lock BE469
-* Deadbold - Schlage (Allegion) ZWavePlus Touchscreen Door lock BE469ZWP
+* Deadbolt - Schlage (Allegion) Touchscreen Door lock BE469
+* Deadbolt - Schlage (Allegion) ZWavePlus Touchscreen Door lock BE469ZWP
 
 
