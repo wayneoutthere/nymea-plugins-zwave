@@ -1,6 +1,6 @@
 {
-    "title": "Z-Wave Fibaro",
-    "tagline": "Integrate Z-Wave based devices from Fibaro",
+    "title": "Z-Wave Springs Window Fashions (Graber)",
+    "tagline": "Support for Z-Wave devices by Springs Window Fashions (Graber).",
     "icon": "fibaro.jpg",
     "stability": "vendor",
     "offline": true,
